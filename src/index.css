@@ -1,0 +1,272 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Import Cairo font for Arabic */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap');
+
+/* RTL Support - Arabic Font */
+[dir="rtl"] body,
+[dir="rtl"] * {
+  font-family: 'Cairo', sans-serif !important;
+}
+
+/* RTL Layout Adjustments */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .container {
+  direction: rtl;
+}
+
+/* RTL Icon and Arrow Flipping */
+[dir="rtl"] .icon-flip,
+[dir="rtl"] .arrow-icon,
+[dir="rtl"] svg.flip-rtl {
+  transform: scaleX(-1);
+}
+
+/* RTL Navigation */
+[dir="rtl"] nav ul {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .breadcrumb {
+  flex-direction: row-reverse;
+}
+
+/* RTL Flex and Grid */
+[dir="rtl"] .flex-row {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .grid {
+  direction: rtl;
+}
+
+/* Header Button Wrapper */
+.header-btn-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Menu Centering */
+.site-header--menu-center .site-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header--menu-center .menu-block-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* RTL Specific Adjustments */
+[dir="rtl"] .header-btn-wrapper {
+  margin-right: 0;
+}
+
+/* Header Layout Enforcement */
+.site-header--menu-center .site-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.site-header--menu-center .menu-block-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  /* Ensure it doesn't shrink below content size */
+  min-width: 0;
+}
+
+.header-btn-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  /* Prevent wrapping */
+  flex-shrink: 0;
+}
+
+/* Language Toggle Button Styles */
+.sofax-language-toggle {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border: 2px solid #e0e7ff;
+  border-radius: 12px;
+  color: #1e293b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  font-weight: 600;
+  min-width: 85px;
+  justify-content: center;
+  height: 48px;
+  box-shadow: 0 2px 8px rgba(65, 105, 225, 0.08);
+}
+
+.sofax-language-toggle:hover {
+  background: linear-gradient(135deg, #4169E1 0%, #5b7ef5 100%);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(65, 105, 225, 0.35);
+  border-color: #4169E1;
+}
+
+.sofax-language-toggle .language-icon {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.sofax-language-toggle:hover .language-icon {
+  transform: scale(1.1);
+}
+
+.sofax-language-toggle:hover .language-icon path {
+  stroke: #ffffff;
+}
+
+.sofax-language-toggle .language-text {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 15px;
+}
+
+
+
+/* RTL Spacing Utilities */
+[dir="rtl"] .text-left {
+  text-align: right !important;
+}
+
+[dir="rtl"] .text-right {
+  text-align: left !important;
+}
+
+[dir="rtl"] .float-left {
+  float: right !important;
+}
+
+[dir="rtl"] .float-right {
+  float: left !important;
+}
+
+/* RTL Form Elements */
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] select {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] input::placeholder,
+[dir="rtl"] textarea::placeholder {
+  text-align: right;
+}
+
+/* RTL Swiper/Slider Direction */
+[dir="rtl"] .swiper {
+  direction: rtl;
+}
+
+[dir="rtl"] .swiper-button-next {
+  left: 10px;
+  right: auto;
+}
+
+[dir="rtl"] .swiper-button-prev {
+  right: 10px;
+  left: auto;
+}
+
+a {
+  font-weight: 500;
+  color: #4169E1;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #40E0D0;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #4169E1;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #40E0D0;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+
+  /* Light mode language toggle */
+  .sofax-language-toggle {
+    border-color: rgba(0, 0, 0, 0.1);
+    color: #213547;
+  }
+
+  .sofax-language-toggle:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+}

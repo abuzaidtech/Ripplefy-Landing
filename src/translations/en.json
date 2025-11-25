@@ -1,0 +1,424 @@
+{
+    "nav": {
+        "home": "Home",
+        "features": "Features",
+        "pricing": "Pricing",
+        "testimonial": "Testimonials",
+        "about": "About",
+        "blog": "Blog",
+        "contact": "Contact",
+        "faq": "FAQ",
+        "terms": "Terms & Conditions",
+        "startTrial": "Start Free Trial",
+        "signIn": "Sign In",
+        "signUp": "Sign Up Free"
+    },
+    "hero": {
+        "title": "Transform Your Restaurant Operations with Ripplefy",
+        "subtitle": "The complete digital management platform built for modern restaurants, cafés, and food businesses. Streamline operations, boost customer engagement, and grow your business.",
+        "description": "Replace outdated menus, manual orders, and disconnected systems with one powerful SaaS platform. Trusted by hundreds of restaurants worldwide.",
+        "cta": "Start 14 Days Free Trial",
+        "ctaSecondary": "Book a Demo",
+        "emailPlaceholder": "Enter your email address",
+        "rating": "4.9/5 rating - Trusted by 500+ restaurants worldwide",
+        "stats": {
+            "engagement": "40% higher customer engagement",
+            "accuracy": "60% fewer order mistakes",
+            "satisfaction": "70% fewer customer complaints"
+        }
+    },
+    "features": {
+        "title": "Everything You Need to Run a Modern Restaurant",
+        "subtitle": "Complete Restaurant Management Solutions",
+        "description": "Integrated tools designed to simplify operations, engage customers, and drive growth.",
+        "viewAll": "View all features",
+        "feature1": {
+            "title": "Digital QR Menu",
+            "description": "Real-time menu updates in English & Arabic. Zero printing costs. Custom branding that reflects your restaurant's identity. Boost customer engagement by 40%."
+        },
+        "feature2": {
+            "title": "Advanced Order Management",
+            "description": "Live order tracking with kitchen ticket printing. Multi-payment support with add-ons & customizations. Reduce order mistakes by 60% and speed up service."
+        },
+        "feature3": {
+            "title": "Smart Waiting List",
+            "description": "Notify customers via WhatsApp or SMS - no API setup needed. Smart time estimation keeps guests informed. Reduce complaints by 70% and improve customer experience."
+        },
+        "feature4": {
+            "title": "Inventory Management",
+            "description": "Real-time stock tracking with recipe-based automatic deductions. Waste analytics and reorder alerts. Save $1,000-$3,000 monthly on inventory costs."
+        },
+        "feature5": {
+            "title": "Multi-Branch Control",
+            "description": "Role-based permissions and branch-level reporting. Performance tracking across all locations. Centralized dashboard for complete oversight."
+        },
+        "feature6": {
+            "title": "Advanced Analytics & BI",
+            "description": "Sales insights, peak hours analysis, and profitability reports. Branch comparisons and exportable data. Make data-driven decisions to grow your business."
+        },
+        "feature7": {
+            "title": "Customer Loyalty System",
+            "description": "Points & rewards program with customer profiles. Targeted offers that drive repeat business. Increase customer retention by 35%."
+        }
+    },
+    "whyChooseUs": {
+        "title": "Why Choose Ripplefy?",
+        "subtitle": "The Smarter Way to Manage Your Restaurant",
+        "reason1": {
+            "title": "More Affordable",
+            "description": "Better value than Foodics, Eat App, or Blink. Get enterprise features at a fraction of the cost."
+        },
+        "reason2": {
+            "title": "Faster Setup",
+            "description": "Get started in less than 30 minutes. No complex installation or technical expertise required."
+        },
+        "reason3": {
+            "title": "WhatsApp Integration",
+            "description": "Unique waiting list system with WhatsApp notifications - no API setup needed. A feature competitors don't offer."
+        },
+        "reason4": {
+            "title": "All-in-One Platform",
+            "description": "Replace multiple disconnected systems with one integrated ecosystem. Everything syncs automatically."
+        },
+        "reason5": {
+            "title": "Cloud-Based & Secure",
+            "description": "GDPR compliant with automatic updates. Access your data anywhere, anytime. Bank-level security."
+        },
+        "reason6": {
+            "title": "24/7 Support",
+            "description": "Expert support team ready to help. Multi-language assistance in English and Arabic."
+        }
+    },
+    "pricing": {
+        "title": "Simple, Transparent Pricing",
+        "subtitle": "Choose the plan that fits your business",
+        "description": "All plans include 14-day free trial. No credit card required. Cancel anytime.",
+        "monthly": "Monthly",
+        "yearly": "Yearly",
+        "save": "Save 20%",
+        "starter": {
+            "name": "Starter",
+            "price": "$49",
+            "period": "/month",
+            "description": "Perfect for single restaurant or café",
+            "feature1": "Digital QR Menu (Bilingual)",
+            "feature2": "Order Management System",
+            "feature3": "Up to 50 menu items",
+            "feature4": "Basic Analytics",
+            "feature5": "Email Support",
+            "feature6": "1 User Account",
+            "cta": "Start Free Trial"
+        },
+        "professional": {
+            "name": "Professional",
+            "price": "$99",
+            "period": "/month",
+            "description": "Most popular for growing restaurants",
+            "badge": "Most Popular",
+            "feature1": "Everything in Starter",
+            "feature2": "Smart Waiting List (WhatsApp)",
+            "feature3": "Inventory Management",
+            "feature4": "Customer Loyalty System",
+            "feature5": "Advanced Analytics & BI",
+            "feature6": "Unlimited Menu Items",
+            "feature7": "Priority Support",
+            "feature8": "Up to 5 User Accounts",
+            "cta": "Start Free Trial"
+        },
+        "enterprise": {
+            "name": "Enterprise",
+            "price": "Custom",
+            "period": "",
+            "description": "For multi-branch restaurants",
+            "feature1": "Everything in Professional",
+            "feature2": "Multi-Branch Management",
+            "feature3": "Advanced Permissions",
+            "feature4": "Custom Integrations",
+            "feature5": "Dedicated Account Manager",
+            "feature6": "Custom Training",
+            "feature7": "24/7 Phone Support",
+            "feature8": "Unlimited Users",
+            "cta": "Contact Sales"
+        }
+    },
+    "testimonials": {
+        "title": "Trusted by Restaurant Owners Worldwide",
+        "subtitle": "See what our customers say",
+        "testimonial1": {
+            "text": "Ripplefy transformed our operations completely. The WhatsApp waiting list alone reduced customer complaints by 75%. Best investment we've made!",
+            "author": "Ahmed Hassan",
+            "role": "Owner, Zaytoun Restaurant",
+            "rating": "5.0"
+        },
+        "testimonial2": {
+            "text": "We went from printed menus to digital in one day. The cost savings and flexibility are incredible. Our customers love the bilingual QR menu.",
+            "author": "Sarah Mitchell",
+            "role": "Manager, Brew & Bites Café",
+            "rating": "5.0"
+        },
+        "testimonial3": {
+            "text": "Managing 5 locations was a nightmare before Ripplefy. Now I can see everything from one dashboard. The inventory tracking saved us over $2,500 monthly.",
+            "author": "Omar Al-Rashid",
+            "role": "CEO, Taste Group",
+            "rating": "5.0"
+        }
+    },
+    "cta": {
+        "title": "Ready to Transform Your Restaurant?",
+        "subtitle": "Join hundreds of restaurants already using Ripplefy",
+        "description": "Start your 14-day free trial today. No credit card required. Setup in minutes.",
+        "button1": "Start Free Trial",
+        "button2": "Book a Demo",
+        "guarantee": "30-day money-back guarantee"
+    },
+    "footer": {
+        "tagline": "Simplify. Engage. Grow.",
+        "description": "The complete digital management platform for modern restaurants and cafés.",
+        "product": "Product",
+        "company": "Company",
+        "support": "Support",
+        "legal": "Legal",
+        "copyright": "© 2024 Ripplefy. All rights reserved.",
+        "allRightsReserved": "All rights reserved.",
+        "links": {
+            "features": "Features",
+            "pricing": "Pricing",
+            "integrations": "Integrations",
+            "about": "About Us",
+            "blog": "Blog",
+            "careers": "Careers",
+            "contact": "Contact Us",
+            "help": "Help Center",
+            "faq": "FAQ",
+            "privacy": "Privacy Policy",
+            "terms": "Terms & Conditions"
+        }
+    },
+    "about": {
+        "title": "About Ripplefy",
+        "subtitle": "Revolutionizing Restaurant Management",
+        "mission": {
+            "title": "Our Mission",
+            "description": "We're on a mission to simplify restaurant operations and empower food business owners with modern, affordable technology. Every restaurant deserves access to enterprise-level tools without enterprise-level prices."
+        },
+        "vision": {
+            "title": "Our Vision",
+            "description": "To become the leading restaurant management platform in the MENA region and beyond, helping thousands of restaurants thrive in the digital age."
+        },
+        "story": {
+            "title": "Our Story",
+            "description": "Ripplefy was born from firsthand experience with the challenges restaurant owners face daily - outdated systems, high costs, and poor customer communication. We built a platform that solves real problems with practical, affordable solutions."
+        },
+        "values": {
+            "title": "Our Values",
+            "value1": {
+                "title": "Simplicity First",
+                "description": "Complex problems deserve simple solutions. We build intuitive tools that anyone can use."
+            },
+            "value2": {
+                "title": "Customer Success",
+                "description": "Your success is our success. We're committed to helping every restaurant grow."
+            },
+            "value3": {
+                "title": "Innovation",
+                "description": "We constantly innovate to stay ahead of industry needs and technology trends."
+            },
+            "value4": {
+                "title": "Transparency",
+                "description": "Honest pricing, clear communication, and no hidden fees. Ever."
+            }
+        }
+    },
+    "contact": {
+        "title": "Contact Us",
+        "subtitle": "We're Here to Help",
+        "description": "Have questions? Want to see a demo? Our team is ready to assist you.",
+        "form": {
+            "name": "Full Name",
+            "email": "Email Address",
+            "phone": "Phone Number",
+            "business": "Business Name",
+            "message": "Your Message",
+            "submit": "Send Message",
+            "sending": "Sending...",
+            "success": "Message sent successfully!",
+            "error": "Something went wrong. Please try again."
+        },
+        "info": {
+            "title": "Contact Information",
+            "email": "support@ripplefy.com",
+            "phone": "+1 (555) 123-4567",
+            "hours": "Support available 24/7",
+            "address": "San Francisco, CA"
+        },
+        "support": {
+            "title": "Customer Support",
+            "description": "Our support team is available 24/7 to assist you with any questions or issues."
+        }
+    },
+    "blog": {
+        "title": "Blog & Resources",
+        "subtitle": "Insights, Tips, and Industry News",
+        "readMore": "Read More",
+        "categories": "Categories",
+        "recent": "Recent Articles",
+        "posts": [
+            {
+                "title": "10 Ways to Reduce Food Waste in Your Restaurant",
+                "excerpt": "Discover practical strategies to minimize waste and boost profits using smart inventory management.",
+                "category": "Operations",
+                "date": "Nov 20, 2024"
+            },
+            {
+                "title": "Why Digital Menus Are the Future of Dining",
+                "excerpt": "Learn how QR code menus are transforming the restaurant industry and improving customer experience.",
+                "category": "Technology",
+                "date": "Nov 18, 2024"
+            },
+            {
+                "title": "How to Build Customer Loyalty for Your Restaurant",
+                "excerpt": "Proven tactics to turn first-time diners into regulars using rewards and personalized service.",
+                "category": "Marketing",
+                "date": "Nov 15, 2024"
+            },
+            {
+                "title": "Restaurant Analytics: Key Metrics Every Owner Should Track",
+                "excerpt": "Understand which KPIs matter most for restaurant success and how to improve them.",
+                "category": "Business",
+                "date": "Nov 12, 2024"
+            },
+            {
+                "title": "Managing Multiple Restaurant Locations Effectively",
+                "excerpt": "Best practices for scaling your restaurant business across multiple branches.",
+                "category": "Operations",
+                "date": "Nov 10, 2024"
+            },
+            {
+                "title": "The Complete Guide to Restaurant Order Management",
+                "excerpt": "Streamline your order taking process and reduce errors with modern technology.",
+                "category": "Technology",
+                "date": "Nov 8, 2024"
+            }
+        ],
+        "articles": [
+            {
+                "title": "10 Ways to Reduce Food Waste in Your Restaurant",
+                "excerpt": "Discover practical strategies to minimize waste and boost profits using smart inventory management.",
+                "category": "Operations",
+                "date": "Nov 20, 2024"
+            },
+            {
+                "title": "Why Digital Menus Are the Future of Dining",
+                "excerpt": "Learn how QR code menus are transforming the restaurant industry and improving customer experience.",
+                "category": "Technology",
+                "date": "Nov 18, 2024"
+            },
+            {
+                "title": "How to Build Customer Loyalty for Your Restaurant",
+                "excerpt": "Proven tactics to turn first-time diners into regulars using rewards and personalized service.",
+                "category": "Marketing",
+                "date": "Nov 15, 2024"
+            },
+            {
+                "title": "Restaurant Analytics: Key Metrics Every Owner Should Track",
+                "excerpt": "Understand which KPIs matter most for restaurant success and how to improve them.",
+                "category": "Business",
+                "date": "Nov 12, 2024"
+            },
+            {
+                "title": "Managing Multiple Restaurant Locations Effectively",
+                "excerpt": "Best practices for scaling your restaurant business across multiple branches.",
+                "category": "Operations",
+                "date": "Nov 10, 2024"
+            },
+            {
+                "title": "The Complete Guide to Restaurant Order Management",
+                "excerpt": "Streamline your order taking process and reduce errors with modern technology.",
+                "category": "Technology",
+                "date": "Nov 8, 2024"
+            }
+        ]
+    },
+    "services": {
+        "title": "Services",
+        "subtitle": "Our Services"
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Everything you need to know about Ripplefy",
+        "questions": [
+            {
+                "question": "How fast can I get set up with Ripplefy?",
+                "answer": "Most restaurants complete setup in under 30 minutes. Simply sign up, upload your menu, customize your branding, and you're ready to go. No technical expertise required."
+            },
+            {
+                "question": "Do I need to buy any hardware?",
+                "answer": "No! Ripplefy is 100% cloud-based and works on any device. You can use your existing tablets, phones, or computers. Optional: We support kitchen printers for order tickets."
+            },
+            {
+                "question": "Can I try Ripplefy before committing?",
+                "answer": "Absolutely! We offer a 14-day free trial with full access to all features. No credit card required. Plus, a 30-day money-back guarantee."
+            },
+            {
+                "question": "Does Ripplefy work with my existing POS?",
+                "answer": "Yes, Ripplefy integrates with most major POS systems. Our team can help you set up the integration during onboarding."
+            },
+            {
+                "question": "Is the WhatsApp waiting list feature included in all plans?",
+                "answer": "The WhatsApp waiting list is included in Professional and Enterprise plans. It's one of our most loved features!"
+            },
+            {
+                "question": "Can I use Ripplefy for multiple restaurant locations?",
+                "answer": "Yes! The Enterprise plan is specifically designed for multi-branch operations with centralized management and branch-level reporting."
+            },
+            {
+                "question": "Is my data secure?",
+                "answer": "Absolutely. We use bank-level encryption and are GDPR compliant. Your data is backed up daily and stored on secure cloud servers."
+            },
+            {
+                "question": "What languages does Ripplefy support?",
+                "answer": "Ripplefy fully supports English and Arabic, including RTL (Right-to-Left) layout for Arabic. Your digital menus can display in both languages simultaneously."
+            },
+            {
+                "question": "What kind of support do you offer?",
+                "answer": "We offer 24/7 customer support via email and chat. Professional plan users get priority support, and Enterprise clients get dedicated phone support."
+            },
+            {
+                "question": "Can I cancel anytime?",
+                "answer": "Yes, you can cancel your subscription at any time. No long-term contracts or cancellation fees."
+            }
+        ]
+    },
+    "terms": {
+        "title": "Terms & Conditions",
+        "lastUpdated": "Last Updated: November 2024",
+        "intro": "Please read these terms and conditions carefully before using Ripplefy.",
+        "acceptance": {
+            "title": "1. Acceptance of Terms",
+            "content": "By accessing and using Ripplefy, you accept and agree to be bound by the terms and provision of this agreement."
+        },
+        "service": {
+            "title": "2. Description of Service",
+            "content": "Ripplefy provides a cloud-based restaurant management platform including digital menus, order management, inventory tracking, and related services."
+        },
+        "privacy": {
+            "title": "3. Privacy & Data Protection",
+            "content": "We are committed to protecting your privacy. Our platform is GDPR compliant and uses industry-standard security measures."
+        },
+        "payment": {
+            "title": "4. Payment Terms",
+            "content": "Subscription fees are billed monthly or annually in advance. All fees are non-refundable except as required by law or as stated in our money-back guarantee."
+        },
+        "disclaimer": {
+            "title": "5. Disclaimer",
+            "content": "The service is provided 'as is' without warranty of any kind. We do not guarantee uninterrupted or error-free service."
+        }
+    },
+    "comingSoon": {
+        "title": "Coming Soon",
+        "subtitle": "We're working on something awesome",
+        "description": "This feature will be available shortly. Stay tuned!",
+        "notify": "Notify me when ready",
+        "emailPlaceholder": "Enter your email"
+    }
+}
