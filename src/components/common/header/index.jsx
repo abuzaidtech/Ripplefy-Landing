@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import DesktopMenu from "../../common/navigation/desktop-nav/DesktopMenu";
 import MobileNavbar from "../../common/mobile-nav/MobileNavbar";
 import { menuItemsData } from "../../common/mobile-nav/menuItemsData";
@@ -11,73 +12,101 @@ function Header() {
     let location = useLocation();
     const { language } = useLanguage();
     const isArabic = language === "ar";
+    const isHomePage = location.pathname === "/";
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    // Add scroll detection for mobile header blur effect
+    useEffect(() => {
+        const handleScroll = () => {
+            // Trigger blur effect after scrolling just 10px
+            setIsScrolled(window.scrollY > 10);
+        };
+        
+        // Check initial scroll position
+        handleScroll();
+        
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
         <header
-            className={`site-header sofax-header-section site-header--menu-center  ${location.pathname !== "/" ? "dark-bg inner-header" : "bg-white"
-                } `}
+            className={`site-header sofax-header-section ${!isHomePage ? "white-header" : ""} ${isScrolled ? "scrolled" : ""}`}
             id="sticky-menu"
+            dir={isArabic ? "rtl" : "ltr"}
         >
             <div className="container">
-                {/* Desktop Navigation */}
-                <nav className="navbar site-navbar d-none d-lg-flex" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'relative' }}>
-                    {/* Left side: Logo (EN) or Language Toggle + Buttons (AR) */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '15px', flex: '0 0 auto', zIndex: 10, minWidth: 'fit-content' }}>
-                        {isArabic ? (
-                            <>
-                                <LanguageToggle />
-                                <HeaderButton />
-                            </>
-                        ) : (
-                            <div style={{ marginRight: 0 }}>
-                                <HeaderLogo />
-                            </div>
-                        )}
+                {/* Desktop Navigation - Like Foodics */}
+                <nav 
+                    className="navbar site-navbar d-none d-lg-flex" 
+                    style={{ 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        justifyContent: 'space-between',
+                        width: '100%',
+                        padding: '10px 0'
+                    }}
+                >
+                    {/* Logo + Menu grouped together - menu close to logo */}
+                    <div style={{ 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        gap: '40px',
+                        flexShrink: 0
+                    }}>
+                        {/* Logo Section */}
+                        <div className="header-logo-section">
+                            <HeaderLogo />
+                        </div>
+
+                        {/* Navigation Menu - Close to logo, not centered */}
+                        <div className="menu-block-wrapper" style={{ 
+                            flex: 'none',
+                            justifyContent: 'flex-start'
+                        }}>
+                            <DesktopMenu />
+                        </div>
                     </div>
 
-                    {/* Center: Menu (always centered) */}
-                    <div className="menu-block-wrapper" style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', zIndex: 5 }}>
-                        <DesktopMenu />
-                    </div>
-
-                    {/* Right side: Logo (AR) or Language Toggle + Buttons (EN) */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '15px', flex: '0 0 auto', zIndex: 10, minWidth: 'fit-content' }}>
-                        {isArabic ? (
-                            <div style={{ marginRight: 0 }}>
-                                <HeaderLogo />
-                            </div>
-                        ) : (
-                            <>
-                                <HeaderButton />
-                                <LanguageToggle />
-                            </>
-                        )}
+                    {/* Right Section: Buttons + Language - pushed to the far end */}
+                    <div 
+                        className="header-right-section"
+                        style={{ 
+                            display: 'flex', 
+                            alignItems: 'center', 
+                            gap: '15px',
+                            marginInlineStart: 'auto'
+                        }}
+                    >
+                        <HeaderButton />
+                        <LanguageToggle />
                     </div>
                 </nav>
 
                 {/* Mobile Navigation */}
-                <nav className="navbar site-navbar d-lg-none" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'relative' }}>
-                    {/* Arabic: Language button (left) | English: Menu button (left) */}
-                    <div style={{ flex: '0 0 auto', zIndex: 10 }}>
-                        {isArabic ? (
-                            <LanguageToggle />
-                        ) : (
-                            <MobileNavbar menuItemsData={menuItemsData} title="Menu" onePage={false} />
-                        )}
+                <nav 
+                    className="navbar site-navbar d-lg-none" 
+                    style={{ 
+                        display: 'grid', 
+                        gridTemplateColumns: '1fr auto 1fr',
+                        alignItems: 'center', 
+                        width: '100%',
+                        padding: '10px 0'
+                    }}
+                >
+                    {/* Hamburger Menu */}
+                    <div style={{ justifySelf: 'start' }}>
+                        <MobileNavbar menuItemsData={menuItemsData} title="Menu" onePage={false} />
                     </div>
 
-                    {/* Center: Logo (always centered on mobile) */}
-                    <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', zIndex: 5 }}>
+                    {/* Center Logo */}
+                    <div style={{ justifySelf: 'center' }}>
                         <HeaderLogo />
                     </div>
 
-                    {/* Arabic: Menu button (right) | English: Language button (right) */}
-                    <div style={{ flex: '0 0 auto', zIndex: 10 }}>
-                        {isArabic ? (
-                            <MobileNavbar menuItemsData={menuItemsData} title="Menu" onePage={false} />
-                        ) : (
-                            <LanguageToggle />
-                        )}
+                    {/* Language Toggle */}
+                    <div style={{ justifySelf: 'end' }}>
+                        <LanguageToggle />
                     </div>
                 </nav>
             </div>

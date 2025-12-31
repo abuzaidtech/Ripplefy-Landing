@@ -1,20 +1,19 @@
-import AutoSlider from "../../components/common/auto-slider";
 import BreadCrumb from "../../components/common/Breadcrumb";
-import Faq from "../../components/faq-page";
-import About from "../../components/service-page/about";
-import Services from "../../components/service-page/services";
+import CoreServices from "../../components/service-page/new-layout/CoreServices";
+import ServicesIntegration from "../../components/service-page/new-layout/ServicesIntegration";
+import ServicesImpact from "../../components/service-page/new-layout/ServicesImpact";
 import { useLanguage } from "../../context/LanguageContext";
+import HeroImage from "../../assets/images/Hero/services.jpg";
 
 function ServicePage() {
 	const { t } = useLanguage();
 
 	return (
 		<>
-			<BreadCrumb title={t('services.title')} />
-			<Services />
-			<AutoSlider />
-			<About />
-			<Faq />
+			<BreadCrumb title={t('servicesPage.overview.title')} backgroundImage={HeroImage} />
+			<CoreServices />
+			<ServicesIntegration />
+			<ServicesImpact />
 		</>
 	);
 }

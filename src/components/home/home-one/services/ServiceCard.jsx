@@ -9,9 +9,6 @@ function ServiceCard({ service: { title, description, icon } }) {
 			<div className="sofax-iconbox-data">
 				<h4>{title}</h4>
 				<p>{description}</p>
-				<Link className="sofax-icon-btn" to="/single-service">
-					More details <img src={ArrowRightImg} alt="arrow" />
-				</Link>
 			</div>
 		</div>
 	);

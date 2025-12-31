@@ -17,7 +17,7 @@
 :root {
 	--heading-color: #0e0e0e;
 	--body-color: #3c3c3c;
-	--accent-color: #4169E1;
+	--accent-color: #40E0D0;
 	--secondary-accent: #40E0D0;
 	--light-bg: #f9f9fa;
 	--dark-bg: #0e0e0e;
@@ -28,7 +28,7 @@
 	--light-color3: #dbdbdb1a;
 	--green-bg: #0c9347;
 	--grey-color: #747474;
-	--primary-blue: #4169E1;
+	--primary-blue: #40E0D0;
 	--primary-turquoise: #40E0D0;
 }
 
@@ -378,7 +378,7 @@ h6,
 
 h1,
 .h1 {
-	font-size: 120px;
+	font-size: 80px;
 	letter-spacing: -3px;
 	line-height: 1em;
 	color: #0e0e0e;
@@ -389,7 +389,7 @@ h1,
 
 	h1,
 	.h1 {
-		font-size: 90px;
+		font-size: 70px;
 	}
 }
 
@@ -397,7 +397,7 @@ h1,
 
 	h1,
 	.h1 {
-		font-size: 75px;
+		font-size: 60px;
 	}
 }
 
@@ -405,7 +405,7 @@ h1,
 
 	h1,
 	.h1 {
-		font-size: 60px;
+		font-size: 48px;
 		letter-spacing: -2px;
 	}
 }
@@ -414,25 +414,25 @@ h1,
 
 	h1,
 	.h1 {
-		font-size: 40px;
+		font-size: 36px;
 		letter-spacing: -1px;
 	}
 }
 
 h2,
 .h2 {
-	font-size: 75px;
-	line-height: 1.07em;
+	font-size: 42px;
+	line-height: 1.2em;
 	/* 116.667% */
-	letter-spacing: -2px;
+	letter-spacing: -1px;
 }
 
 @media (max-width: 1199px) {
 
 	h2,
 	.h2 {
-		font-size: 60px;
-		letter-spacing: -3px;
+		font-size: 38px;
+		letter-spacing: -1px;
 	}
 }
 
@@ -440,7 +440,7 @@ h2,
 
 	h2,
 	.h2 {
-		font-size: 48px;
+		font-size: 40px;
 		font-weight: 600;
 		letter-spacing: -0.64px;
 	}
@@ -450,14 +450,14 @@ h2,
 
 	h2,
 	.h2 {
-		font-size: 36px;
+		font-size: 32px;
 		letter-spacing: -0.64px;
 	}
 }
 
 h3,
 .h3 {
-	font-size: 35px;
+	font-size: 30px;
 	line-height: 1.4em;
 }
 
@@ -473,24 +473,24 @@ h3,
 
 	h3,
 	.h3 {
-		font-size: 30px;
+		font-size: 26px;
 	}
 }
 
 h4,
 .h4 {
-	font-size: 24px;
+	font-size: 22px;
 	line-height: 32px;
 }
 
 h5,
 .h5 {
-	font-size: 20px;
+	font-size: 18px;
 }
 
 h6,
 .h6 {
-	font-size: 18px;
+	font-size: 16px;
 }
 
 p {
@@ -2458,8 +2458,8 @@ a.social-icon img {
 	-webkit-transition: all 0.4s ease-in-out;
 	transition: all 0.4s ease-in-out;
 	overflow: hidden;
-	color: var(--heading-color) !important;
-	background-color: var(--accent-color);
+	color: #ffffff !important;
+	background-color: #0c1b3c;
 	position: relative;
 	z-index: 0;
 	overflow: hidden;
@@ -2469,8 +2469,9 @@ a.social-icon img {
 
 .sofax-default-btn.btn-hover:hover,
 #sofax-submit-btn.btn-hover:hover {
-	background: var(--dark-bg);
-	color: var(--white-color) !important;
+	background: #ffffff;
+	color: #0c1b3c !important;
+	border: 2px solid #0c1b3c;
 }
 
 .sofax-default-btn.sofax-header-btn,
@@ -2819,13 +2820,15 @@ button#sofax-subscription-btn {
 	line-height: 26px;
 	width: 230px;
 	height: 50px;
-	background-color: var(--accent-color);
+	background-color: #0c1b3c;
+	color: #ffffff !important;
 	transition: all 0.4s;
 }
 
 button#sofax-subscription-btn:hover {
-	color: var(--white-color);
-	background: var(--dark-bg);
+	color: #0c1b3c !important;
+	background: #ffffff;
+	border: 2px solid #0c1b3c;
 }
 
 @media (max-width: 767px) {

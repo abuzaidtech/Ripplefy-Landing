@@ -1,30 +1,110 @@
+/* Google Fonts Import - Must be at the very top */
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+
+/* ============================================
+   CSS VARIABLES - Brand Colors
+   ============================================ */
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --primary-color: #0e1e3f;
+  --secondary-color: #40E0D0;
+  --secondary-hover: #3dd4c5;
+  --text-dark: #0e1e3f;
+  --text-light: #ffffff;
+  --bg-dark: #0e1e3f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
+}
+
+/* LTR - English Font (Arimo) */
+:root {
+  font-family: 'Arimo', sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Import Cairo font for Arabic */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap');
-
-/* RTL Support - Arabic Font */
-[dir="rtl"] body,
-[dir="rtl"] * {
-  font-family: 'Cairo', sans-serif !important;
+/* Apply Arimo font globally for English (LTR) */
+html:not([dir="rtl"]),
+html:not([dir="rtl"]) body,
+html:not([dir="rtl"]) * {
+  font-family: 'Arimo', sans-serif !important;
 }
 
-/* RTL Layout Adjustments */
+/* Prevent horizontal scroll on all screens */
+#root {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+/* RTL Support - Arabic Font (IBM Plex Sans Arabic) */
+[dir="rtl"],
+[dir="rtl"] body,
+[dir="rtl"] * {
+  font-family: 'IBM Plex Sans Arabic', sans-serif !important;
+}
+
+/* ============================================
+   BLURRED GLASS NAVBAR - Modern Glassmorphism
+   ============================================ */
+.site-header {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  /* Let original CSS handle positioning - don't add position properties here */
+}
+
+.site-header:hover {
+  background: rgba(255, 255, 255, 0.92) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.site-header .nav-link-item {
+  color: #1a1a2e !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.site-header .nav-link-item:hover,
+.site-header .nav-link-item.active {
+  color: #40E0D0 !important;
+}
+
+.site-header .arrow-down-icon {
+  fill: #1a1a2e;
+}
+
+/* ============================================
+   RTL LAYOUT - COMPLETE REBUILD
+   ============================================ */
 [dir="rtl"] {
   text-align: right;
+  direction: rtl;
 }
 
 [dir="rtl"] .container {
@@ -56,32 +136,115 @@
   direction: rtl;
 }
 
-/* Header Button Wrapper */
+/* ============================================
+   RTL ICONBOX - COMPLETE REBUILD
+   Fixes the icon/text alignment issue
+   ============================================ */
+[dir="rtl"] .sofax-iconbox-wrap2 {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  gap: 20px !important;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+[dir="rtl"] .sofax-iconbox-icon2 {
+  order: 2 !important;
+  flex-shrink: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+[dir="rtl"] .sofax-iconbox-data2 {
+  order: 1 !important;
+  text-align: right !important;
+  flex: 1 !important;
+}
+
+[dir="rtl"] .sofax-iconbox-data2 h4 {
+  text-align: right !important;
+  margin-bottom: 8px !important;
+}
+
+[dir="rtl"] .sofax-iconbox-data2 p {
+  text-align: right !important;
+  margin: 0 !important;
+  line-height: 1.6;
+}
+
+/* RTL Default Content */
+[dir="rtl"] .sofax-default-content {
+  text-align: right !important;
+}
+
+[dir="rtl"] .sofax-default-content h2,
+[dir="rtl"] .sofax-default-content h3,
+[dir="rtl"] .sofax-default-content h4,
+[dir="rtl"] .sofax-default-content p {
+  text-align: right !important;
+}
+
+/* RTL Section Title */
+[dir="rtl"] .sofax-section-title {
+  text-align: right !important;
+}
+
+[dir="rtl"] .sofax-section-title.center {
+  text-align: center !important;
+}
+
+/* RTL Service Card */
+[dir="rtl"] .sofax-service-wrap {
+  text-align: right !important;
+}
+
+[dir="rtl"] .sofax-service-wrap h3,
+[dir="rtl"] .sofax-service-wrap p {
+  text-align: right !important;
+}
+
+/* RTL Animation styles */
+[dir="rtl"] .tg-heading-subheading {
+  text-align: right !important;
+}
+
+[dir="rtl"] .tg-heading-subheading.center,
+[dir="rtl"] .sofax-section-title.center .tg-heading-subheading {
+  text-align: center !important;
+}
+
+/* RTL Row Ordering Fix */
+[dir="rtl"] .row {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .order-lg-2 {
+  order: 1 !important;
+}
+
+/* RTL Extra Content Alignment */
+[dir="rtl"] .extra-mt {
+  text-align: right;
+}
+
+[dir="rtl"] .ml-50,
+[dir="rtl"] .ml-80,
+[dir="rtl"] .mr-80 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* ============================================
+   HEADER LAYOUT
+   ============================================ */
 .header-btn-wrapper {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-/* Menu Centering */
-.site-header--menu-center .site-navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.site-header--menu-center .menu-block-wrapper {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-/* RTL Specific Adjustments */
-[dir="rtl"] .header-btn-wrapper {
-  margin-right: 0;
-}
-
-/* Header Layout Enforcement */
 .site-header--menu-center .site-navbar {
   display: flex;
   align-items: center;
@@ -89,91 +252,88 @@
   width: 100%;
 }
 
+/* Override centered menu - keep menu close to logo */
 .site-header--menu-center .menu-block-wrapper {
-  flex: 1;
+  flex: none !important;
   display: flex;
-  justify-content: center;
-  /* Ensure it doesn't shrink below content size */
+  justify-content: flex-start !important;
   min-width: 0;
+}
+
+/* Override the menu-block centering from main.css */
+.site-header--menu-center .menu-block {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* For RTL - menu stays close to logo on right side */
+[dir="rtl"] .site-header--menu-center .menu-block-wrapper {
+  justify-content: flex-start !important;
+}
+
+[dir="rtl"] .site-header--menu-center .menu-block {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .header-btn-wrapper {
   display: flex;
   align-items: center;
   gap: 15px;
-  /* Prevent wrapping */
   flex-shrink: 0;
 }
 
-/* Language Toggle Button Styles */
+[dir="rtl"] .header-btn-wrapper {
+  margin-right: 0;
+}
+
+/* ============================================
+   LANGUAGE TOGGLE BUTTON
+   ============================================ */
 .sofax-language-toggle {
   display: inline-flex !important;
   align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-  border: 2px solid #e0e7ff;
-  border-radius: 12px;
-  color: #1e293b;
+  gap: 6px;
+  padding: 8px 12px;
+  background: transparent;
+  border: none;
+  border-radius: 50px;
+  color: #0e1e3f;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
-  min-width: 85px;
+  min-width: auto;
   justify-content: center;
-  height: 48px;
-  box-shadow: 0 2px 8px rgba(65, 105, 225, 0.08);
+  height: auto;
 }
 
 .sofax-language-toggle:hover {
-  background: linear-gradient(135deg, #4169E1 0%, #5b7ef5 100%);
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(65, 105, 225, 0.35);
-  border-color: #4169E1;
+  background: rgba(14, 30, 63, 0.08);
+  color: #0e1e3f;
+  transform: none;
+  box-shadow: none;
 }
 
 .sofax-language-toggle .language-icon {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   transition: transform 0.3s ease;
-  flex-shrink: 0;
 }
 
 .sofax-language-toggle:hover .language-icon {
-  transform: scale(1.1);
-}
-
-.sofax-language-toggle:hover .language-icon path {
-  stroke: #ffffff;
+  transform: rotate(15deg);
 }
 
 .sofax-language-toggle .language-text {
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.5px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
-
-
-/* RTL Spacing Utilities */
-[dir="rtl"] .text-left {
-  text-align: right !important;
-}
-
-[dir="rtl"] .text-right {
-  text-align: left !important;
-}
-
-[dir="rtl"] .float-left {
-  float: right !important;
-}
-
-[dir="rtl"] .float-right {
-  float: left !important;
-}
-
-/* RTL Form Elements */
+/* ============================================
+   RTL FORM ELEMENTS
+   ============================================ */
 [dir="rtl"] input,
 [dir="rtl"] textarea,
 [dir="rtl"] select {
@@ -201,9 +361,219 @@
   left: auto;
 }
 
+/* ============================================
+   HERO SECTION ENHANCEMENTS
+   ============================================ */
+.sofax-hero-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 50%, #f0f4ff 100%);
+}
+
+.sofax-hero-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 70%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(64, 224, 208, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Floating Animation for Dashboard */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.sofax-hero-thumb1 {
+  animation: float 4s ease-in-out infinite;
+}
+
+.sofax-hero-thumb1 > img {
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sofax-hero-thumb1:hover > img {
+  transform: scale(1.02);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove shadow from shape images */
+.sofax-hero-shape img,
+.sofax-hero-shape2 img {
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+/* Hero Content Styling */
+.sofax-hero-content h1 {
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-size: 56px;
+}
+
+/* Make H1 responsive on mobile - don't cut off */
+@media (max-width: 991px) {
+  .sofax-hero-content h1 {
+    font-size: 42px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .sofax-hero-content h1 {
+    font-size: 32px;
+    padding: 0 10px;
+  }
+  
+  /* Center footer content on mobile */
+  .footer-logo-section {
+    text-align: center !important;
+  }
+  
+  .footer-logo-section img {
+    margin: 0 auto;
+  }
+  
+  .footer-logo-section span,
+  .footer-logo-section p {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .sofax-footer-section .col-6,
+  .sofax-footer-section .col-12 {
+    text-align: center !important;
+  }
+  
+  .sofax-footer-section .col-6 div,
+  .sofax-footer-section .col-12 div {
+    text-align: center !important;
+  }
+  
+  .sofax-footer-section ul {
+    text-align: center !important;
+  }
+  
+  .footer-social-icons {
+    justify-content: center !important;
+  }
+  
+  .footer-copyright {
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .sofax-hero-content h1 {
+    font-size: 28px;
+  }
+}
+
+/* Subscription Field Enhancement */
+.sofax-subscription-field {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 50px;
+  padding: 6px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 0 auto 30px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  gap: 8px;
+}
+
+.sofax-subscription-field:focus-within {
+  border-color: #40E0D0;
+  box-shadow: 0 15px 50px rgba(64, 224, 208, 0.15);
+}
+
+.sofax-subscription-field input {
+  border: none !important;
+  outline: none;
+  padding: 15px 20px;
+  flex: 1;
+  min-width: 200px;
+  font-size: 16px;
+  background: transparent;
+  color: #1a1a2e;
+  height: 100%;
+  width: 100%;
+}
+
+.sofax-subscription-field input::placeholder {
+  color: #9ca3af;
+  white-space: nowrap;
+  overflow: visible;
+}
+
+#sofax-subscription-btn {
+  background: #0c1b3c;
+  color: #ffffff;
+  border: none;
+  padding: 15px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+#sofax-subscription-btn:hover {
+  background: #40E0D0;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(64, 224, 208, 0.3);
+}
+
+/* Rating Section */
+.sofax-rating-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 40px;
+}
+
+.sofax-rating-icon ul {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sofax-rating-icon ul li {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* ============================================
+   GENERAL STYLES
+   ============================================ */
 a {
   font-weight: 500;
-  color: #4169E1;
+  color: #40E0D0;
   text-decoration: inherit;
 }
 
@@ -213,8 +583,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -231,13 +599,17 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #0c1b3c;
+  color: #ffffff;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  border-color: #4169E1;
+  background-color: #40E0D0;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(64, 224, 208, 0.3);
 }
 
 button:focus,
@@ -256,17 +628,532 @@ button:focus-visible {
   }
 
   button {
-    background-color: #f9f9f9;
-  }
-
-  /* Light mode language toggle */
-  .sofax-language-toggle {
-    border-color: rgba(0, 0, 0, 0.1);
-    color: #213547;
-  }
-
-  .sofax-language-toggle:hover {
-    background: rgba(0, 0, 0, 0.05);
-    border-color: rgba(0, 0, 0, 0.2);
+    background-color: #0c1b3c;
   }
 }
+
+/* ============================================
+   MODERN FOOTER STYLES
+   ============================================ */
+.sofax-footer-section {
+  background: linear-gradient(180deg, #0c1b3c 0%, #1a1a2e 100%);
+  color: #ffffff;
+  padding: 80px 0 30px;
+}
+
+.sofax-footer-wrap {
+  margin-bottom: 40px;
+}
+
+.sofax-footer-wrap p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+.sofax-footer-menu h5 {
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+
+.sofax-footer-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sofax-footer-menu ul li {
+  margin-bottom: 12px;
+}
+
+.sofax-footer-menu ul li a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.sofax-footer-menu ul li a:hover {
+  color: #40E0D0;
+  padding-left: 5px;
+}
+
+[dir="rtl"] .sofax-footer-menu ul li a:hover {
+  padding-left: 0;
+  padding-right: 5px;
+}
+
+.sofax-social-icon ul {
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 25px 0 0;
+  list-style: none;
+}
+
+.sofax-social-icon ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.sofax-social-icon ul li a:hover {
+  background: #40E0D0;
+  transform: translateY(-3px);
+}
+
+.sofax-social-icon ul li a svg {
+  fill: #ffffff;
+  width: 18px;
+  height: 18px;
+}
+
+/* Footer Copyright */
+.sofax-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 25px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.sofax-footer-bottom p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+@media (max-width: 991px) {
+  .sofax-language-toggle {
+    min-width: 70px;
+    height: 44px;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .sofax-language-toggle .language-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .sofax-language-toggle .language-text {
+    font-size: 14px;
+  }
+
+  .container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .site-navbar {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Mobile Header - Transparent initially, blur on scroll */
+  .site-header {
+    background: transparent !important;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: none;
+    box-shadow: none;
+    transition: all 0.3s ease;
+  }
+
+  /* When scrolled - add blur background */
+  .site-header.sticky-menu,
+  .site-header.scrolled,
+  header.sofax-header-section.scrolled,
+  header.sofax-header-section.sticky-menu {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  /* RTL Row Fix for Mobile */
+  [dir="rtl"] .row {
+    flex-direction: column;
+  }
+
+  /* Mobile Footer - Center all content */
+  .sofax-footer-section .footer-brand-col,
+  .sofax-footer-section .col-xl-2,
+  .sofax-footer-section .col-lg-2,
+  .sofax-footer-section .col-md-4,
+  .sofax-footer-section .col-6 {
+    text-align: center !important;
+  }
+
+  .sofax-footer-section .footer-logo-section,
+  .sofax-footer-section .footer-logo-section > div {
+    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sofax-footer-section .footer-logo-link,
+  .sofax-footer-section .footer-logo-img {
+    margin: 0 auto !important;
+  }
+
+  .sofax-footer-section .footer-brand-name,
+  .sofax-footer-section .footer-description {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .sofax-footer-section h5 {
+    text-align: center !important;
+  }
+
+  .sofax-footer-section ul {
+    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sofax-footer-section .footer-social-icons {
+    justify-content: center !important;
+    flex-direction: row !important;
+  }
+
+  .sofax-footer-section .footer-copyright {
+    text-align: center !important;
+  }
+
+  /* Footer Bottom Centering */
+  .sofax-footer-section .col-lg-6,
+  .sofax-footer-section .col-md-6 {
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 575px) {
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .sofax-subscription-field {
+    flex-direction: column !important;
+    border-radius: 16px;
+    padding: 15px;
+  }
+
+  .sofax-subscription-field input {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center !important;
+  }
+
+  #sofax-subscription-btn {
+    width: 100%;
+  }
+}
+
+/* ============================================
+   SECONDARY COLOR HOVER EFFECTS (#40E0D0)
+   ============================================ */
+
+/* Footer Links Hover */
+.sofax-footer-section a:hover {
+  color: #40E0D0 !important;
+}
+
+/* Default Buttons Hover */
+.sofax-default-btn:hover {
+  background-color: #40E0D0 !important;
+  border-color: #40E0D0 !important;
+  color: #0e1e3f !important;
+}
+
+/* Hero Section CTA Button */
+#sofax-subscription-btn:hover {
+  background-color: #40E0D0 !important;
+  color: #0e1e3f !important;
+}
+
+/* Nav Links Hover */
+.site-header .nav-link-item:hover {
+  color: #40E0D0 !important;
+}
+
+/* Service Cards Hover */
+.sofax-service-wrap:hover {
+  border-color: #40E0D0;
+}
+
+/* Pricing Cards Hover */
+.sofax-pricing-wrap:hover {
+  border-color: #40E0D0;
+}
+
+/* ============================================
+   DEMO BUTTON ANIMATION
+   ============================================ */
+.demo-btn-animated {
+  position: relative;
+  overflow: hidden;
+}
+
+.demo-btn-animated::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.demo-btn-animated:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(14, 30, 63, 0.3);
+  /* Keep same background color - no color change on hover */
+  background-color: #0e1e3f !important;
+}
+
+/* ============================================
+   FAQ ACCORDION ICON COLORS
+   ============================================ */
+.sofax-accordion-wrap1 .accordion-icon {
+  background-color: #3dd4c5 !important;
+}
+
+.sofax-accordion-wrap1 .accordion-icon img {
+  filter: brightness(0) invert(1);
+}
+
+/* ============================================
+   PRICING TOGGLE BUTTON COLORS
+   ============================================ */
+.pricing-btn .btn-toggle {
+  background-color: #0e1e3f !important;
+}
+
+.pricing-btn .btn-toggle:checked {
+  background-color: #3dd4c5 !important;
+  border-color: #0e1e3f !important;
+  color: #fff !important;
+}
+
+/* ============================================
+   PRICING CARD OUTLINE BUTTON FIX
+   ============================================ */
+.sofax-pricing-footer .sofax-default-btn.outline-btn {
+  color: #0e1e3f !important;
+  border-color: #0e1e3f !important;
+  background-color: transparent !important;
+}
+
+.sofax-pricing-footer .sofax-default-btn.outline-btn:hover {
+  background-color: #3dd4c5 !important;
+  border-color: #3dd4c5 !important;
+  color: #fff !important;
+}
+/* Hero Subscription Input Fix */
+.sofax-hero-section form input.hero-subscription-input,
+input.hero-subscription-input {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  background: transparent !important;
+}
+
+.sofax-hero-section form input.hero-subscription-input:focus,
+input.hero-subscription-input:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Hero Mobile Layout Adjustments */
+.hero-rating-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.hero-stars-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap: 5px;
+}
+
+.hero-rating-text {
+  font-size: 18px;
+  line-height: 28px;
+  color: #0e1e3f; /* Default text color */
+}
+
+@media (max-width: 767px) {
+  /* Stack the form elements */
+  .hero-subscription-form {
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 10px !important;
+    border-radius: 20px !important;
+  }
+
+  .hero-subscription-form input.hero-subscription-input {
+    width: 100% !important;
+    text-align: center !important;
+    margin-bottom: 10px !important;
+    padding: 15px !important;
+  }
+
+  /* Force center alignment for placeholder in RTL mobile */
+  [dir="rtl"] .hero-subscription-form input.hero-subscription-input::placeholder {
+    text-align: center !important;
+  }
+  
+  [dir="rtl"] .hero-subscription-form input.hero-subscription-input {
+    text-align: center !important;
+  }
+
+  .hero-subscription-form button {
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 50px !important;
+  }
+
+  /* Stack the rating section: Text on top, Stars below */
+  .hero-rating-wrapper {
+    flex-direction: column-reverse;
+    gap: 5px;
+  }
+
+  .hero-rating-text {
+    text-align: center;
+    display: block;
+  }
+}
+
+/* Fix for nested scrolling issues on mobile */
+section, 
+.section, 
+.sofax-section-padding, 
+.sofax-section-padding2,
+.sofax-section-padding3,
+.sofax-section-padding4,
+.sofax-section-padding5,
+.sofax-section-padding6,
+div[id="service"],
+div[id="pricing"] {
+  height: auto !important;
+  min-height: auto !important;
+  max-height: none !important;
+  overflow-y: visible !important;
+  overflow-x: visible !important;
+}
+
+/* Ensure body doesn't lock scroll */
+body {
+  overflow-y: auto !important;
+  height: auto !important;
+  min-height: 100vh;
+}
+
+/* FAQ RTL Fixes */
+[dir="rtl"] .sofax-accordion-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+[dir="rtl"] .sofax-accordion-header .accordion-button {
+  text-align: right;
+  padding-left: 15px;
+  padding-right: 0;
+  width: auto;
+  flex: 1;
+  background: transparent;
+  box-shadow: none;
+}
+
+[dir="rtl"] .sofax-accordion-header .accordion-button::after {
+  display: none;
+}
+
+[dir="rtl"] .sofax-accordion-header .accordion-icon {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* Contact Form Styles */
+.sofax-main-field input,
+.sofax-main-field textarea {
+  background-color: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  color: #1a1a2e !important;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.sofax-main-field input:focus,
+.sofax-main-field textarea:focus {
+  border-color: #40E0D0 !important;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(64, 224, 208, 0.1);
+}
+
+/* Ensure form container is centered on mobile */
+@media (max-width: 768px) {
+  .sofax-field-box {
+    margin: 0 auto !important;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px !important;
+  }
+}
+

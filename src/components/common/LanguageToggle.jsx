@@ -10,30 +10,52 @@ function LanguageToggle() {
             className="sofax-language-toggle"
             aria-label="Toggle Language"
             title={language === "en" ? "Switch to Arabic" : "Switch to English"}
+            style={{
+                background: 'transparent',
+                border: 'none',
+                padding: '8px 12px',
+                borderRadius: '50px',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                transition: 'all 0.3s ease',
+                color: '#0e1e3f'
+            }}
         >
             <svg
-                width="22"
-                height="22"
+                width="20"
+                height="20"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 className="language-icon"
             >
                 <path
-                    d="M12.913 17H20L18.089 14.188M12.913 17H11.005M12.913 17L15.428 13.428M18.089 14.188L15.428 13.428M18.089 14.188L19 12M15.428 13.428L13.5 11M11 11L13.5 11M13.5 11L14.5 9M13.5 11L10.5 3.00002L7 11"
-                    stroke="#FF6B35"
-                    strokeWidth="1.8"
+                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                    stroke="currentColor"
+                    strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                 />
                 <path
-                    d="M12 21H6C5.44772 21 5 20.5523 5 20V4C5 3.44772 5.44772 3 6 3H18C18.5523 3 19 3.44772 19 4V9"
-                    stroke="#4169E1"
-                    strokeWidth="1.8"
+                    d="M2 12H22"
+                    stroke="currentColor"
+                    strokeWidth="2"
                     strokeLinecap="round"
+                    strokeLinejoin="round"
+                />
+                <path
+                    d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2Z"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 />
             </svg>
-            <span className="language-text">{language === "en" ? "ع" : "EN"}</span>
+            <span className="language-text" style={{ fontWeight: '600', fontSize: '14px' }}>
+                {language === "en" ? "AR" : "EN"}
+            </span>
         </button>
     );
 }

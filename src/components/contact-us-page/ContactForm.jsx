@@ -1,72 +1,71 @@
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
-import Field from "../common/Field";
 import { useLanguage } from "../../context/LanguageContext";
+import Field from "../common/Field";
+import "react-toastify/dist/ReactToastify.css";
 
 function ContactForm() {
-	const { t } = useLanguage();
+	const { t, isRTL } = useLanguage();
 	const {
 		register,
 		handleSubmit,
 		reset,
 		formState: { errors },
 	} = useForm();
-	const submitForm = (formData) => {
-		toast("Form Submited!");
+
+	const onSubmit = (data) => {
+		const subject = "Contact Request";
+		const body = `Name: ${data.name}%0D%0AEmail: ${data.email}%0D%0APhone: ${data.phone}%0D%0AMessage: ${data.message}`;
+		window.location.href = `mailto:info@ripplefy.app?subject=${subject}&body=${body}`;
+		toast.success(t('contact.form.success') || "Message sent successfully!");
 		reset();
-		console.log("Submite Form Data = ", formData);
 	};
+
 	return (
-		<div className="sofax-field-box ml-50">
-			<ToastContainer position="bottom-right" />
+		<div className="sofax-field-box" dir={isRTL ? "rtl" : "ltr"}>
+			<ToastContainer position="bottom-right" rtl={isRTL} />
 			<h3>{t('contact.title')}</h3>
-			<form onSubmit={handleSubmit(submitForm)}>
-				<div className="row">
-					<div className="col-lg-6">
-						<div className="sofax-main-field">
-							<Field label={t('contact.form.name')} error={errors.name}>
-								<input
-									{...register("name", { required: "Name is required." })}
-									type="name"
-									name="name"
-									id="name"
-								/>
-							</Field>
-						</div>
-					</div>
-					<div className="col-lg-6">
-						<div className="sofax-main-field">
-							<Field label={t('contact.form.email')} error={errors.email}>
-								<input
-									{...register("email", { required: "Email is required." })}
-									type="email"
-									name="email"
-									id="email"
-								/>
-							</Field>
-						</div>
-					</div>
-					<div className="col-lg-12">
-						<div className="sofax-main-field">
-							<label>{t('contact.form.message')}</label>
-							<textarea name="textarea" placeholder={t('contact.form.message')}></textarea>
-						</div>
-					</div>
-					<div className="col-lg-12">
-						<div className="sofax-form-box">
-							<input type="checkbox" id="css" />
-							<label htmlFor="css">
-								Save my name, email, & website in this browser for the next time I comment.
-							</label>
-						</div>
-					</div>
-					<div className="col-lg-12">
-						<div className="tac">
-							<button id="sofax-submit-btn" className="mt-30" type="submit">
-								{t('contact.form.submit')}
-							</button>
-						</div>
-					</div>
+			<p>{t('contact.description')}</p>
+			<form onSubmit={handleSubmit(onSubmit)}>
+				<div className="sofax-main-field">
+					<Field label={t('contact.form.name') + " *"} error={errors.name}>
+						<input
+							{...register("name", { required: t('contact.form.error') || "Name is required" })}
+							type="text"
+							placeholder={t('contact.form.name')}
+						/>
+					</Field>
+				</div>
+				<div className="sofax-main-field">
+					<Field label={t('contact.form.email')} error={errors.email}>
+						<input
+							{...register("email")}
+							type="email"
+							placeholder={t('contact.form.email')}
+						/>
+					</Field>
+				</div>
+				<div className="sofax-main-field">
+					<Field label={t('contact.form.phone') + " *"} error={errors.phone}>
+						<input
+							{...register("phone", { required: t('contact.form.error') || "Phone is required" })}
+							type="tel"
+							placeholder={t('contact.form.phone')}
+						/>
+					</Field>
+				</div>
+				<div className="sofax-main-field">
+					<Field label={t('contact.form.message')} error={errors.message}>
+						<textarea
+							{...register("message")}
+							placeholder={t('contact.form.message')}
+						/>
+					</Field>
+				</div>
+				<div className="sofax-form-btn">
+					<button type="submit" className="sofax-default-btn">
+						{t('contact.form.submit')}
+					</button>
 				</div>
 			</form>
 		</div>

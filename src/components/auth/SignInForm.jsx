@@ -22,7 +22,12 @@ function SignInForm() {
 			<div className="container">
 				<div className="sofax-form-field-box">
 					<h2>Welcome back</h2>
-					<div className="sofax-field-box">
+					<div className="sofax-field-box" style={{
+						backgroundColor: '#fff',
+						borderRadius: '20px',
+						boxShadow: '0px 10px 30px rgba(0,0,0,0.08)',
+						padding: '40px'
+					}}>
 						<form onSubmit={handleSubmit(submitForm)}>
 							<div className="sofax-main-field">
 								<Field label="Email address" error={errors.email}>
@@ -58,15 +63,9 @@ function SignInForm() {
 								<label htmlFor="css">Remember me</label>
 								<Link to="/">Forget password?</Link>
 							</div>
-							<button className="sofax-subcribe-btn2" type="submit">
+							<button className="sofax-subcribe-btn2" type="submit" style={{ width: '100%', borderRadius: '50px', marginTop: '20px' }}>
 								Create Account
 							</button>
-							<div className="login mt-24">
-								<span>Don’t have an account?</span>
-								<Link to="/sign-up">
-									<h4>Sign up</h4>
-								</Link>
-							</div>
 							<div className="login-with-google mt-24">
 								<a target="_blank" href="https://www.google.com/">
 									<img src={Icon} alt="Icon" />

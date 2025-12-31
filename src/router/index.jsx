@@ -68,10 +68,10 @@ export const router = createBrowserRouter([
 						path: "service",
 						element: <ServicePage />,
 					},
-					{
-						path: "single-service",
-						element: <SingleService />,
-					},
+					// {
+					// 	path: "single-service",
+					// 	element: <SingleService />,
+					// },
 					{
 						path: "*",
 						element: <ErrorPage />,
@@ -92,10 +92,10 @@ export const router = createBrowserRouter([
 				path: "/",
 				element: <LayoutThirteen />,
 				children: [
-					{
-						path: "sign-up",
-						element: <SignUp />,
-					},
+					// {
+					// 	path: "sign-up",
+					// 	element: <SignUp />,
+					// },
 					{
 						path: "sign-in",
 						element: <SignIn />,

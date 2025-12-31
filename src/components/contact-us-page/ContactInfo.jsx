@@ -4,9 +4,9 @@ import Icon3 from "../../assets/images/contact/icon3.png";
 import { useLanguage } from "../../context/LanguageContext";
 
 function ContactInfo() {
-	const { t } = useLanguage();
+	const { t, isRTL } = useLanguage();
 	return (
-		<div className="contactus-authore-wrapper">
+		<div className="contactus-authore-wrapper" dir={isRTL ? "rtl" : "ltr"}>
 			<div className="sofax-iconbox-wrap2">
 				<div className="sofax-iconbox-icon2">
 					<img src={Icon1} alt="Icon chat" />
@@ -22,7 +22,9 @@ function ContactInfo() {
 				</div>
 				<div className="sofax-iconbox-data2">
 					<h4>Give us a call</h4>
-					<p>{t('contact.info.phone')}</p>
+					<p>
+						<a href="tel:+201019597200" style={{ color: 'inherit', direction: 'ltr', unicodeBidi: 'embed' }}>+20 1019 597 200</a> / <a href="tel:+201020345455" style={{ color: 'inherit', direction: 'ltr', unicodeBidi: 'embed' }}>+20 1020 345 455</a>
+					</p>
 				</div>
 			</div>
 			<div className="sofax-iconbox-wrap2">
@@ -31,7 +33,9 @@ function ContactInfo() {
 				</div>
 				<div className="sofax-iconbox-data2">
 					<h4>Email Us</h4>
-					<p>{t('contact.info.email')}</p>
+					<p>
+						<a href="mailto:info@ripplefy.app" style={{ color: 'inherit' }}>info@ripplefy.app</a>
+					</p>
 				</div>
 			</div>
 		</div>

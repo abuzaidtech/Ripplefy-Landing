@@ -1,7 +1,7 @@
 {
     "nav": {
         "home": "Home",
-        "features": "Features",
+        "features": "Services",
         "pricing": "Pricing",
         "testimonial": "Testimonials",
         "about": "About",
@@ -10,17 +10,18 @@
         "faq": "FAQ",
         "terms": "Terms & Conditions",
         "startTrial": "Start Free Trial",
+        "getDemo": "Get a 1-to-1 demo",
         "signIn": "Sign In",
         "signUp": "Sign Up Free"
     },
     "hero": {
-        "title": "Transform Your Restaurant Operations with Ripplefy",
+        "title": "The All-in-One Restaurant Management System",
         "subtitle": "The complete digital management platform built for modern restaurants, cafés, and food businesses. Streamline operations, boost customer engagement, and grow your business.",
         "description": "Replace outdated menus, manual orders, and disconnected systems with one powerful SaaS platform. Trusted by hundreds of restaurants worldwide.",
-        "cta": "Start 14 Days Free Trial",
+        "cta": "Start 14 days free trial",
         "ctaSecondary": "Book a Demo",
         "emailPlaceholder": "Enter your email address",
-        "rating": "4.9/5 rating - Trusted by 500+ restaurants worldwide",
+        "rating": "Trusted by 500+ restaurants worldwide",
         "stats": {
             "engagement": "40% higher customer engagement",
             "accuracy": "60% fewer order mistakes",
@@ -33,32 +34,28 @@
         "description": "Integrated tools designed to simplify operations, engage customers, and drive growth.",
         "viewAll": "View all features",
         "feature1": {
-            "title": "Digital QR Menu",
-            "description": "Real-time menu updates in English & Arabic. Zero printing costs. Custom branding that reflects your restaurant's identity. Boost customer engagement by 40%."
+            "title": "Digital Ordering & Customer Experience",
+            "description": "Enhances the customer journey by reducing wait times, speeding up ordering, and delivering a seamless digital experience both inside and outside the restaurant."
         },
         "feature2": {
-            "title": "Advanced Order Management",
-            "description": "Live order tracking with kitchen ticket printing. Multi-payment support with add-ons & customizations. Reduce order mistakes by 60% and speed up service."
+            "title": "Order & Operations Management",
+            "description": "Centralizes all operational workflows to improve accuracy, speed, and consistency across all service channels."
         },
         "feature3": {
-            "title": "Smart Waiting List",
-            "description": "Notify customers via WhatsApp or SMS - no API setup needed. Smart time estimation keeps guests informed. Reduce complaints by 70% and improve customer experience."
+            "title": "Inventory & Cost Control",
+            "description": "Provides full visibility over inventory movement, helping prevent shortages, reduce waste, and protect profit margins."
         },
         "feature4": {
-            "title": "Inventory Management",
-            "description": "Real-time stock tracking with recipe-based automatic deductions. Waste analytics and reorder alerts. Save $1,000-$3,000 monthly on inventory costs."
+            "title": "Staff & Branch Management",
+            "description": "Simplifies workforce and branch management while ensuring accountability and consistent operations across locations."
         },
         "feature5": {
-            "title": "Multi-Branch Control",
-            "description": "Role-based permissions and branch-level reporting. Performance tracking across all locations. Centralized dashboard for complete oversight."
+            "title": "Analytics & Business Intelligence",
+            "description": "Transforms operational data into actionable insights that support smarter, faster decision-making."
         },
         "feature6": {
-            "title": "Advanced Analytics & BI",
-            "description": "Sales insights, peak hours analysis, and profitability reports. Branch comparisons and exportable data. Make data-driven decisions to grow your business."
-        },
-        "feature7": {
-            "title": "Customer Loyalty System",
-            "description": "Points & rewards program with customer profiles. Targeted offers that drive repeat business. Increase customer retention by 35%."
+            "title": "Growth & Loyalty Enablement",
+            "description": "Supports sustainable growth by improving customer retention and enabling smooth expansion across new branches."
         }
     },
     "whyChooseUs": {
@@ -87,6 +84,10 @@
         "reason6": {
             "title": "24/7 Support",
             "description": "Expert support team ready to help. Multi-language assistance in English and Arabic."
+        },
+        "ecosystem": {
+            "title": "Complete Restaurant Ecosystem",
+            "description": "All the tools you need to run a successful restaurant in one integrated platform. From digital menus to inventory management, we've got you covered."
         }
     },
     "pricing": {
@@ -107,7 +108,7 @@
             "feature4": "Basic Analytics",
             "feature5": "Email Support",
             "feature6": "1 User Account",
-            "cta": "Start Free Trial"
+            "cta": "Get Started"
         },
         "professional": {
             "name": "Professional",
@@ -123,7 +124,7 @@
             "feature6": "Unlimited Menu Items",
             "feature7": "Priority Support",
             "feature8": "Up to 5 User Accounts",
-            "cta": "Start Free Trial"
+            "cta": "Get Started"
         },
         "enterprise": {
             "name": "Enterprise",
@@ -138,7 +139,7 @@
             "feature6": "Custom Training",
             "feature7": "24/7 Phone Support",
             "feature8": "Unlimited Users",
-            "cta": "Contact Sales"
+            "cta": "Get Started"
         }
     },
     "testimonials": {
@@ -165,11 +166,26 @@
     },
     "cta": {
         "title": "Ready to Transform Your Restaurant?",
-        "subtitle": "Join hundreds of restaurants already using Ripplefy",
-        "description": "Start your 14-day free trial today. No credit card required. Setup in minutes.",
-        "button1": "Start Free Trial",
+        "subtitle": "Request a free demo of Ripplefy restaurant management system",
+        "description": "Let us help you get started with the right tools for your business.",
+        "button1": "Get a 1-to-1 demo",
         "button2": "Book a Demo",
-        "guarantee": "30-day money-back guarantee"
+        "guarantee": "30-day money-back guarantee",
+        "form": {
+            "firstName": "First name",
+            "lastName": "Last name",
+            "email": "Email",
+            "phone": "Phone number",
+            "businessName": "Business name",
+            "branches": "Number of branches",
+            "country": "Country Name",
+            "pleaseSelect": "Please Select",
+            "termsCheckbox": "By checking this box, I confirm that I have read, understood and agree to the",
+            "termsLink": "Terms and Conditions",
+            "privacyCheckbox": "By using this form you agree with the storage and handling of your data by this website in accordance with our",
+            "privacyLink": "Privacy Policy",
+            "submit": "Submit"
+        }
     },
     "footer": {
         "tagline": "Simplify. Engage. Grow.",
@@ -178,8 +194,16 @@
         "company": "Company",
         "support": "Support",
         "legal": "Legal",
+        "resources": "Resources",
         "copyright": "© 2024 Ripplefy. All rights reserved.",
         "allRightsReserved": "All rights reserved.",
+        "demoForm": {
+            "title": "Get 1-to-1 Demo",
+            "name": "Name",
+            "brandName": "Brand Name",
+            "email": "Email",
+            "submit": "Request Demo"
+        },
         "links": {
             "features": "Features",
             "pricing": "Pricing",
@@ -246,13 +270,13 @@
         },
         "info": {
             "title": "Contact Information",
-            "email": "support@ripplefy.com",
-            "phone": "+1 (555) 123-4567",
-            "hours": "Support available 24/7",
-            "address": "San Francisco, CA"
+            "email": "info@ripplefy.app",
+            "phone": "+20 1019 597 200 / +20 1020 345 455",
+            "hours": "Cairo, Egypt",
+            "address": "Cairo, Egypt"
         },
         "support": {
-            "title": "Customer Support",
+            "title": "Location",
             "description": "Our support team is available 24/7 to assist you with any questions or issues."
         }
     },
@@ -420,5 +444,142 @@
         "description": "This feature will be available shortly. Stay tuned!",
         "notify": "Notify me when ready",
         "emailPlaceholder": "Enter your email"
+    },
+    "serviceAbout": {
+        "title": "Strategy takes it the next business level",
+        "description": "Experience unparalleled business progress with Ripplefy. Our expert team in leveraging cutting-edge digital strategies to propel your brand forward.",
+        "feature1": {
+            "title": "Multiply global marketing business to strategy",
+            "description": "Conducting thorough markets research and analysis understand local market dynamics consumer."
+        },
+        "feature2": {
+            "title": "Outstanding social media marketing business",
+            "description": "Produces high-quality relevant & engaging content tailored each social media platform & audience."
+        },
+        "feature3": {
+            "title": "Customizable workflow",
+            "description": "These workflows are typically designed to integrate seamlessly with other systems, applications."
+        }
+    },
+    "aboutPage": {
+        "about": {
+            "title": "About Ripplefy",
+            "p1": "Ripplefy is a modern, cloud-based Restaurant Operating System designed to centralize and simplify restaurant operations. We help restaurants move beyond fragmented tools by bringing ordering, operations, inventory, staff management, and analytics into one unified platform.",
+            "p2": "Ripplefy is built for restaurants that want clarity, efficiency, and control — whether operating a single location or scaling across multiple branches. Our system enables real-time visibility, smarter decision-making, and seamless operational flow across the entire business."
+        },
+        "whyChoose": {
+            "title": "Why Choose Ripplefy",
+            "items": [
+                {
+                    "title": "Unified Platform",
+                    "desc": "One unified platform instead of multiple disconnected systems"
+                },
+                {
+                    "title": "Real-time Visibility",
+                    "desc": "Real-time visibility across operations, inventory, and performance"
+                },
+                {
+                    "title": "Restaurant Focused",
+                    "desc": "Designed specifically for restaurant workflows"
+                },
+                {
+                    "title": "Scalable Growth",
+                    "desc": "Scalable for growth and multi-branch expansion"
+                },
+                {
+                    "title": "Cloud-based & Secure",
+                    "desc": "Cloud-based, secure, and easy to adopt"
+                },
+                {
+                    "title": "Operational Efficiency",
+                    "desc": "Focused on clarity, control, and operational efficiency"
+                }
+            ]
+        },
+        "mission": {
+            "title": "Our Mission",
+            "desc": "To empower restaurant owners and teams with a unified operating system that simplifies daily operations, provides real-time clarity, and enables data-driven decisions — helping restaurants operate efficiently and grow sustainably."
+        },
+        "vision": {
+            "title": "Our Vision",
+            "desc": "To become the leading Restaurant Operating System in the region, transforming how restaurants operate by replacing complexity and fragmentation with intelligent, connected, and scalable solutions."
+        }
+    },
+    "servicesPage": {
+        "overview": {
+            "title": "Our Services",
+            "subtitle": "Ripplefy provides end-to-end tools to simplify restaurant operations, expansion, and control — all in one unified platform."
+        },
+        "services": [
+            {
+                "title": "Digital Ordering & Customer Experience",
+                "features": [
+                    "Digital QR Menu",
+                    "Online ordering & order tracking",
+                    "Table reservations",
+                    "WhatsApp smart waiting list",
+                    "Customer notifications"
+                ],
+                "description": "Enhances the customer journey by reducing wait times, speeding up ordering, and delivering a seamless digital experience both inside and outside the restaurant."
+            },
+            {
+                "title": "Order & Operations Management",
+                "features": [
+                    "Advanced order management",
+                    "Dine-in, takeaway, and delivery workflows",
+                    "Kitchen order coordination",
+                    "Real-time order status"
+                ],
+                "description": "Centralizes all operational workflows to improve accuracy, speed, and consistency across all service channels."
+            },
+            {
+                "title": "Inventory & Cost Control",
+                "features": [
+                    "Real-time inventory tracking",
+                    "Stock alerts and consumption monitoring",
+                    "Supplier and item management",
+                    "Waste reduction insights"
+                ],
+                "description": "Provides full visibility over inventory movement, helping prevent shortages, reduce waste, and protect profit margins."
+            },
+            {
+                "title": "Staff & Branch Management",
+                "features": [
+                    "Staff accounts and role-based permissions",
+                    "Delivery staff management",
+                    "Multi-branch operations",
+                    "Centralized control panel"
+                ],
+                "description": "Simplifies workforce and branch management while ensuring accountability and consistent operations across locations."
+            },
+            {
+                "title": "Analytics & Business Intelligence",
+                "features": [
+                    "Real-time dashboards",
+                    "Sales and performance reports",
+                    "Trend analysis and forecasting",
+                    "Branch and staff performance insights"
+                ],
+                "description": "Transforms operational data into actionable insights that support smarter, faster decision-making."
+            },
+            {
+                "title": "Growth & Loyalty Enablement",
+                "features": [
+                    "Customer loyalty system",
+                    "Repeat customer tracking",
+                    "Data-driven growth insights",
+                    "Scalable cloud infrastructure"
+                ],
+                "description": "Supports sustainable growth by improving customer retention and enabling smooth expansion across new branches."
+            }
+        ],
+        "integration": {
+            "title": "How Our Services Work Together",
+            "description": "All Ripplefy services are designed to integrate seamlessly into one unified system. From ordering to analytics, every module connects to provide centralized control and real-time visibility. Whether you're managing a single location or scaling across multiple branches, our platform ensures smooth operations and consistent performance everywhere."
+        },
+        "impact": {
+            "title": "Transform Your Restaurant Operations",
+            "description": "Ripplefy connects people, operations, and data — turning restaurants into scalable, intelligent businesses. With complete control, simplified operations, and data-driven insights, restaurant owners gain the confidence to grow sustainably."
+        }
     }
 }

@@ -8,9 +8,9 @@ import ServiceCard from "./ServiceCard";
 import { useLanguage } from "../../../../context/LanguageContext";
 
 function Services() {
-	const { t } = useLanguage();
+	const { t, isRTL } = useLanguage();
 
-	// Ripplefy's 7 core features
+	// Ripplefy's 6 core services
 	const servicesData = [
 		{
 			id: crypto.randomUUID(),
@@ -48,12 +48,6 @@ function Services() {
 			title: t('features.feature6.title'),
 			description: t('features.feature6.description'),
 		},
-		{
-			id: crypto.randomUUID(),
-			icon: Icon1,
-			title: t('features.feature7.title'),
-			description: t('features.feature7.description'),
-		},
 	];
 
 	return (
@@ -61,17 +55,23 @@ function Services() {
 			<div className="container">
 				<div className="sofax-section-title max-width-770 ">
 					<div className="row">
-						<div className="col-xl-8 col-lg-8">
-							<div className="tg-heading-subheading animation-style3">
-								<h2>{t('features.title')}</h2>
-							</div>
-						</div>
-						<div className="col-xl-4 col-lg-4 d-flex justify-content-end align-items-center">
+						{/* Button - first in DOM, shown on left for Arabic */}
+						<div 
+							className={`col-xl-4 col-lg-4 d-flex align-items-center ${isRTL ? 'justify-content-start' : 'justify-content-end'} order-2 order-lg-${isRTL ? '1' : '2'}`}
+						>
 							<FadeInUp className="sofax-title-btn">
 								<Link className="sofax-default-btn pill" data-text={t('features.viewAll')} to="/service">
 									<span className="button-wraper">{t('features.viewAll')}</span>
 								</Link>
 							</FadeInUp>
+						</div>
+						{/* Title - shown on right for Arabic */}
+						<div 
+							className={`col-xl-8 col-lg-8 order-1 order-lg-${isRTL ? '2' : '1'}`}
+						>
+							<div className="tg-heading-subheading animation-style3">
+								<h2 style={{ textAlign: isRTL ? 'right' : 'left' }}>{t('features.title')}</h2>
+							</div>
 						</div>
 					</div>
 				</div>

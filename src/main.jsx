@@ -34,6 +34,9 @@ import "./assets/css/app.css";
 import "./assets/css/main.css";
 // import "./assets/css/mobile-nav.css";
 
+// CUSTOM OVERRIDES - Must be last to override everything
+import "./index.css";
+
 // React Router Dom
 import { RouterProvider } from "react-router-dom";
 import { router } from "./router";

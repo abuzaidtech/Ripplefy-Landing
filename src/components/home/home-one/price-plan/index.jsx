@@ -108,7 +108,7 @@ function PricePlan() {
 							onChange={handleChange}
 						/>
 					</div>
-					<label>{t('pricing.yearly')} <span style={{ color: '#4169E1', fontSize: '0.85em', marginLeft: '4px' }}>({t('pricing.save')})</span></label>
+					<label>{t('pricing.yearly')} <span style={{ color: '#40E0D0', fontSize: '0.85em', marginLeft: '4px' }}>({t('pricing.save')})</span></label>
 				</div>
 
 				<div className="row" id="table-price-value">

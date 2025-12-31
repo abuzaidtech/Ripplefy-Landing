@@ -1,7 +1,7 @@
 import { AdvancedMarker, APIProvider, Map } from "@vis.gl/react-google-maps";
 
 function MyMap() {
-	const position = { lat: 53.54992, lng: 10.00678 };
+	const position = { lat: 30.0444, lng: 31.2357 };
 	return (
 		<div className="responsive-map">
 			<APIProvider apiKey={""}>
